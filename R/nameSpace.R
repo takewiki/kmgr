@@ -83,8 +83,58 @@ nameSpace_add <- function(
 
 
 
+# mediawiki域名空间批量增加------
+#' mediawiki域名空间批量增加
+#'
+#' @param data 配置文件，文件列号必须为NS_Name,NS_Title,NS_Id
+#' @param file 结果存放名称
+#'
+#' @return 无返回值
+#' @export
+#'
+#' @examples
+#' nameSpace_addBatch();
+nameSpace_addBatch <- function(data,file="./res.txt"){
+
+  count <- nrow(data);
+  for(i in 1:count){
+    NS_Name <- data[i,"NS_Name",drop=TRUE];
+    NS_Title <- data[i,"NS_Title",drop=TRUE];
+    NS_Id <- data[i,"NS_Id",drop=TRUE];
+    nameSpace_add(NS_Name = NS_Name ,NS_Title = NS_Title ,NS_Id = NS_Id ,file = file );
+  }
+}
 
 
+#' 生成nameSpace批量新增的配置文件
+#'
+#' @return 返回df的数据集
+#' @export
+#'
+#' @examples
+#' nameSpace_dataTemplate();
+nameSpace_dataTemplate <- function(){
+  NS_Name <-c('EAST','WEST','SOURTH','NORTH');
+  NS_Title <-c('东','西','南','北');
+  NS_Id <-seq_along(NS_Title)*2+98;
+  data <- data.frame(NS_Name,NS_Title,NS_Id,stringsAsFactors = F);
+  return(data)
+}
+
+
+#' 命名空间演示数据处理
+#'
+#' @param file 结算处理文件名
+#'
+#' @return 返回值
+#' @export
+#'
+#' @examples
+#' nameSpace_demoBatch("./res.txt");
+nameSpace_demoBatch <- function(file="./res.txt"){
+  data <- nameSpace_dataTemplate();
+  nameSpace_addBatch(data,file);
+}
 
 
 

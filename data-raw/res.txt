@@ -1,0 +1,84 @@
+#create namespace for EAST with id start from 100 end with 101
+#created by hawken.hu on 2019-07-09
+define('NS_EAST',100);
+define('NS_EAST_TALK',101);
+$wgExtraNamespaces[NS_EAST] = '东';
+$wgExtraNamespaces[NS_EAST_TALK] = '东讨论';
+$wgGroupPermissions['东超管']['read']=true;
+$wgGroupPermissions['东超管']['edit']=true;
+$wgGroupPermissions['东超管']['delete']=true;
+$wgGroupPermissions['东管理']['read']=true;
+$wgGroupPermissions['东管理']['delete']=true;
+$wgGroupPermissions['东制单']['read']=true;
+$wgGroupPermissions['东制单']['edit']=true;
+$wgGroupPermissions['东订阅']['read']=true;
+$wgNamespaceProtection[NS_EAST] = array('queryNamespaceEAST');
+$wgGroupPermissions['东制单']['queryNamespaceEAST']=true;
+$wgGroupPermissions['sysop']['queryNamespaceEAST']=true;
+$wgNamespacePermissionLockdown[NS_EAST]['edit'] = array('东制单','东管理','东超管','sysop');
+$wgNamespacePermissionLockdown[NS_EAST]['read'] = array('东订阅','东制单','东管理','东超管','sysop');
+$wgNamespacesWithSubpages[NS_EAST] = true;
+$wgNamespacesWithSubpages[NS_EAST_TALK] = true;
+#create namespace for WEST with id start from 102 end with 103
+#created by hawken.hu on 2019-07-09
+define('NS_WEST',102);
+define('NS_WEST_TALK',103);
+$wgExtraNamespaces[NS_WEST] = '西';
+$wgExtraNamespaces[NS_WEST_TALK] = '西讨论';
+$wgGroupPermissions['西超管']['read']=true;
+$wgGroupPermissions['西超管']['edit']=true;
+$wgGroupPermissions['西超管']['delete']=true;
+$wgGroupPermissions['西管理']['read']=true;
+$wgGroupPermissions['西管理']['delete']=true;
+$wgGroupPermissions['西制单']['read']=true;
+$wgGroupPermissions['西制单']['edit']=true;
+$wgGroupPermissions['西订阅']['read']=true;
+$wgNamespaceProtection[NS_WEST] = array('queryNamespaceWEST');
+$wgGroupPermissions['西制单']['queryNamespaceWEST']=true;
+$wgGroupPermissions['sysop']['queryNamespaceWEST']=true;
+$wgNamespacePermissionLockdown[NS_WEST]['edit'] = array('西制单','西管理','西超管','sysop');
+$wgNamespacePermissionLockdown[NS_WEST]['read'] = array('西订阅','西制单','西管理','西超管','sysop');
+$wgNamespacesWithSubpages[NS_WEST] = true;
+$wgNamespacesWithSubpages[NS_WEST_TALK] = true;
+#create namespace for SOURTH with id start from 104 end with 105
+#created by hawken.hu on 2019-07-09
+define('NS_SOURTH',104);
+define('NS_SOURTH_TALK',105);
+$wgExtraNamespaces[NS_SOURTH] = '南';
+$wgExtraNamespaces[NS_SOURTH_TALK] = '南讨论';
+$wgGroupPermissions['南超管']['read']=true;
+$wgGroupPermissions['南超管']['edit']=true;
+$wgGroupPermissions['南超管']['delete']=true;
+$wgGroupPermissions['南管理']['read']=true;
+$wgGroupPermissions['南管理']['delete']=true;
+$wgGroupPermissions['南制单']['read']=true;
+$wgGroupPermissions['南制单']['edit']=true;
+$wgGroupPermissions['南订阅']['read']=true;
+$wgNamespaceProtection[NS_SOURTH] = array('queryNamespaceSOURTH');
+$wgGroupPermissions['南制单']['queryNamespaceSOURTH']=true;
+$wgGroupPermissions['sysop']['queryNamespaceSOURTH']=true;
+$wgNamespacePermissionLockdown[NS_SOURTH]['edit'] = array('南制单','南管理','南超管','sysop');
+$wgNamespacePermissionLockdown[NS_SOURTH]['read'] = array('南订阅','南制单','南管理','南超管','sysop');
+$wgNamespacesWithSubpages[NS_SOURTH] = true;
+$wgNamespacesWithSubpages[NS_SOURTH_TALK] = true;
+#create namespace for NORTH with id start from 106 end with 107
+#created by hawken.hu on 2019-07-09
+define('NS_NORTH',106);
+define('NS_NORTH_TALK',107);
+$wgExtraNamespaces[NS_NORTH] = '北';
+$wgExtraNamespaces[NS_NORTH_TALK] = '北讨论';
+$wgGroupPermissions['北超管']['read']=true;
+$wgGroupPermissions['北超管']['edit']=true;
+$wgGroupPermissions['北超管']['delete']=true;
+$wgGroupPermissions['北管理']['read']=true;
+$wgGroupPermissions['北管理']['delete']=true;
+$wgGroupPermissions['北制单']['read']=true;
+$wgGroupPermissions['北制单']['edit']=true;
+$wgGroupPermissions['北订阅']['read']=true;
+$wgNamespaceProtection[NS_NORTH] = array('queryNamespaceNORTH');
+$wgGroupPermissions['北制单']['queryNamespaceNORTH']=true;
+$wgGroupPermissions['sysop']['queryNamespaceNORTH']=true;
+$wgNamespacePermissionLockdown[NS_NORTH]['edit'] = array('北制单','北管理','北超管','sysop');
+$wgNamespacePermissionLockdown[NS_NORTH]['read'] = array('北订阅','北制单','北管理','北超管','sysop');
+$wgNamespacesWithSubpages[NS_NORTH] = true;
+$wgNamespacesWithSubpages[NS_NORTH_TALK] = true;
